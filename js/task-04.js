@@ -3,7 +3,30 @@
 
 const counterValue = 0;
 
-const buttonEl = document.querySelectorAll("button");
+const buttonDecrementEl = document.querySelector(
+  'button[data-action="decrement"]'
+);
+console.log(buttonDecrementEl);
+
+buttonDecrementEl.addEventListener('click', () => {
+    console.log('---')
+});
 
 
-buttonEl.addEventListener("click", );
+
+
+const buttonIncrementEl = document.querySelector(
+  'button[data-action="increment"]'
+);
+console.log(buttonIncrementEl);
+
+buttonIncrementEl.addEventListener('click', () => {
+    console.log('+++')
+
+});
+
+
+const spanEl = document.querySelector('#value');
+console.log(spanEl);
+
+counterValue = spanEl;
