@@ -1,14 +1,14 @@
 const formEl = document.querySelector(".login-form");
-const useremailEl = document.querySelector('[type="email"]');
+const userEmailEl = document.querySelector('[type="email"]');
 const passwordEl = document.querySelector('[type="password"]');
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const elements = {
-    email: useremailEl.value,
+    email: userEmailEl.value,
     pass: passwordEl.value,
   };
-  if (useremailEl.value === "" || passwordEl.value === "") {
+  if (userEmailEl.value === "" || passwordEl.value === "") {
     return alert("Заповніть всі поля будь-ласка!");
   }
     
