@@ -17,10 +17,23 @@ const images = [
 
 const listImagesEl = document.querySelector(".gallery");
 
-const makeGaleriEl = ({ url, alt }) => {
-  const addingTags = `<li> <img src ="${url}" alt ="${alt}" width ="400" height ="400"></li>`;
+const makeGaleryEl = ({ url, alt }) => {
+  return `<li> <img src ="${url}" alt ="${alt}" width ="400" height ="400"></li>`;
   
-  listImagesEl.insertAdjacentHTML("beforebegin", addingTags);
 };
 
-const addingGaleryImg = images.forEach(makeGaleriEl);
+const addingTags = images.map(makeGaleryEl).join("");
+listImagesEl.insertAdjacentHTML("beforebegin", addingTags);
+
+
+
+
+// const listImagesEl = document.querySelector(".gallery");
+
+// const makeGaleriEl = ({ url, alt }) => {
+//   const addingTags = `<li> <img src ="${url}" alt ="${alt}" width ="400" height ="400"></li>`;
+
+//   listImagesEl.insertAdjacentHTML("beforebegin", addingTags);
+// };
+
+// const addingGaleryImg = images.forEach(makeGaleriEl);
